@@ -1,6 +1,11 @@
-import { dameCarta, plantarme, recargarPagina, saber } from "./motor";
 import "./style.css";
-import { mostrarPuntuacion } from "./ui";
+import {
+  dameCarta,
+  mostrarPuntuacion,
+  plantarme,
+  recargarPagina,
+  saber,
+} from "./ui";
 
 function eventos() {
   const botonAñadir = document.querySelector(".añadir");
