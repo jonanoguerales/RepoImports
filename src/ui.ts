@@ -6,7 +6,7 @@ import {
   mostrarCarta,
 } from "./motor";
 
-export const mensajes = (msj: string) => {
+const mensajes = (msj: string) => {
   const errorM = document.querySelector(".error");
   if (
     errorM !== null &&
@@ -25,7 +25,7 @@ export const mostrarPuntuacion = () => {
   )
     mostrarPuntuacion.textContent = puntuacion.toString();
 };
-export const pintarCarta = (url: string) => {
+const pintarCarta = (url: string) => {
   const cartaImg = document.querySelector(".imagen");
   if (
     cartaImg !== null &&
@@ -37,8 +37,7 @@ export const pintarCarta = (url: string) => {
     console.log("No se encontro la carta");
   }
 };
-
-export const mensajesPuntuaciones = () => {
+const mensajesPuntuaciones = () => {
   deshabilitar(true);
   ocultar("block");
   if (puntuacion > 4) {
@@ -87,7 +86,7 @@ export const plantarme = () => {
   nuevaPartida("block");
 };
 
-export function pintarPuntuacion() {
+function pintarPuntuacion() {
   if (puntuacion > 7.5) {
     mensajes("Game Over");
     deshabilitar(true);
@@ -116,7 +115,7 @@ export function recargarPagina() {
   deshabilitarPlantarse(false);
 }
 
-export function nuevaPartida(smj: string) {
+function nuevaPartida(smj: string) {
   const botonNueva = document.querySelector(".nueva");
   if (
     botonNueva !== null &&
@@ -129,7 +128,7 @@ export function nuevaPartida(smj: string) {
   }
 }
 
-export function deshabilitar(msj: boolean) {
+function deshabilitar(msj: boolean) {
   const botonAñadir = document.querySelector(".añadir");
   if (
     botonAñadir !== null &&
@@ -142,7 +141,7 @@ export function deshabilitar(msj: boolean) {
   }
 }
 
-export function deshabilitarPlantarse(msj: boolean) {
+function deshabilitarPlantarse(msj: boolean) {
   const botonPlantarse = document.querySelector(".plantarse");
   if (
     botonPlantarse !== null &&
